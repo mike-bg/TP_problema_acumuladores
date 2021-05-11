@@ -27,5 +27,18 @@ public:
     }
 
     std::vector<T> total() const { return t; }
+};
+
+
+//Especializamos para std::vector<float>
+template<>
+class AcumuladorSuma<std::vector<float> > : public Acumulador<std::vector<float> > {
+	std::vector<float> t;
+public:
+	AcumuladorSuma(const std::vector<float>& t) : t(t) { }
+	void push(const std::vector<float>& that) {
+	       for (int i = 0; i<std::min(t.size(),that.size()); ++i) this->t[i] += that[i];
+	}
+	std::vector<float> total() const       { return this->t; }
 
 };

@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
     //T x {2};
     v = std::vector<int>(4,0);
 
-    AcumuladorSuma<std::complex<float> > acc_complex(0.0f, 0.0f);
+    AcumuladorSuma<std::complex<float> > acc_complex(0.0f);
     //acc_complex.push(5.0f, 0.0f);
 	acc_complex.push(std::complex<float>(-1.0f,1.0f));
 	acc_complex.push(std::complex<float>(2.0f,-1.0f));
@@ -42,24 +42,14 @@ int main(int argc, char** argv) {
 
     //T x {};
 
-	AcumuladorSuma<std::vector<float>> acc_vector({0.0f, 0.0f, 0.0f});
-	acc_vector.push({5.0f, 0.0f});
+	//AcumuladorSuma<std::vector<float> > acc_vector( {0.0f, 0.0f} );
+	/*acc_vector.push({5.0f, 0.0f});
 	acc_vector.push(std::vector<float>{{-1.0f, 1.0f, 3.0f}});
 	acc_vector.push(std::vector<float>{{2.0f}});
 	acc_vector.push(std::vector<float>{{3.0f,-1.0f}});
 	acc_vector.push(std::vector<float>{{3.2f, 3.2f, 3.2f, 3.2f}});
-	std::cout<<"vector  : ";
+	std::cout << "vector  : ";
 	for (float f : acc_vector.total()) std::cout<<f<<" ";
 	std::cout<<std::endl;
-
-
-
-
-
-
-
-
-
-
-    
+	*/    
 };

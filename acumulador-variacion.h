@@ -6,7 +6,8 @@ class AcumuladorVariacion : public Acumulador<T> {
     T t, t_ini;
     bool primero;
     std::chrono::system_clock::time_point start, now;
-
+    
+public:
     AcumuladorVariacion() : primero(true) {}
 
     void push(const T& e) {

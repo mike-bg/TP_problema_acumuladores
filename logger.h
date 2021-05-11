@@ -6,7 +6,7 @@
 template <typename T>
 class Logger {
     std::vector<Acumulador<T>*> acumuladores;
-
+public:
     Logger(const std::vector<Acumulador<T>*>& acumuladores) : acumuladores(acumuladores) {}
 
     void log(const T& e) {
